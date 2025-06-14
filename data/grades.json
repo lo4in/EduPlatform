@@ -1,0 +1,32 @@
+[
+    {
+        "subject": "Math",
+        "student": "Oleg",
+        "grade": "5",
+        "teacher": "Bob"
+    },
+    {
+        "subject": "Math",
+        "student": "Nikita",
+        "grade": "4",
+        "teacher": "Nastya"
+    },
+    {
+        "subject": "Math",
+        "student": "Shaxlo",
+        "grade": "5",
+        "teacher": "Nastya"
+    },
+    {
+        "subject": "Math",
+        "student": "Anvar",
+        "grade": "3",
+        "teacher": "Nastya"
+    },
+    {
+        "subject": "Math",
+        "student": "Kolya",
+        "grade": "3",
+        "teacher": "Nastya"
+    }
+]
