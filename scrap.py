@@ -48,15 +48,3 @@ def scrape_olx_books(subject_query, pages=1):
                     break
 
     return results
-
-if __name__ == "__main__":
-    subject = input("Введите предмет: ")
-    ads = scrape_olx_books(subject, pages=1)
-
-    if not ads:
-        print("Ничего не найдено.")
-    else:
-        for ad in ads:
-            print(f"{ad['title']} - {ad['price']}")
-            print(f"Ссылка: {ad['url']}\n")
-
