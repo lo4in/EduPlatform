@@ -8,5 +8,10 @@
         "Teacher": "Nastya",
         "subject": "Math",
         "HW": "\u043f\u0440\u0438\u043c\u0435\u0440\u044b 123 1313 1334"
+    },
+    {
+        "Teacher": "Nastya",
+        "Subject": "Biology ",
+        "HW": "Anatomy"
     }
 ]

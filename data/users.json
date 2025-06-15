@@ -10,5 +10,9 @@
     {
         "full_name": "Nastya",
         "role": "Teacher"
+    },
+    {
+        "full_name": "Ashley",
+        "role": "Student"
     }
 ]

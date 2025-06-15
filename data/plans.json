@@ -4,5 +4,11 @@
         "subject": "Math",
         "Date": "2025-06-14 18:24",
         "topic": "Calculus"
+    },
+    {
+        "teacher": "Nastya",
+        "subject": "IT",
+        "Date": "2025-06-14 19:32",
+        "topic": "Python"
     }
 ]

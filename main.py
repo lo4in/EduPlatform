@@ -4,12 +4,27 @@ from models.models import Admin
 import os
 import json
 from datetime import datetime, date, timedelta
+from scrap import scrape_olx_books
 
 def load_data(path):
     if not os.path.exists(path):
         return []
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+def student_find_books(subject):
+    ads = scrape_olx_books(subject, pages=1)
+
+    if not ads:
+        print("Ничего не найдено")
+        return
+
+    print(f"\nРезультаты по запросу \"{subject}\":\n")
+    for ad in ads[:10]:
+        print(f"{ad['title']} - {ad['price']}")
+        print(f"Ссылка: {ad['url']}\n")
+
+
 
 def admin_menu(name):
     print(f"Ваше имя: {name}\nВыберите действие:\n1. Создать Пользователя\n")
@@ -42,9 +57,9 @@ def admin_menu(name):
             user_role1 = "Student"
         else:
             print("Нет такой роли!")
-            return  # Выходим из функции
+            return  
 
-        admin = Admin(name)  # создаём экземпляр класса Admin
+        admin = Admin(name)  
         admin.create_user(user_name, user_role1)
 
 def teacher_menu(name):
@@ -75,7 +90,7 @@ def teacher_menu(name):
         print("Неправильный выбор!")
 
 def student_menu(name):
-    print(f"Ваше имя: {name}\nВыберите действие:\n1. Посмотреть оценки \n2.Посмотреть ДЗ")
+    print(f"Ваше имя: {name}\nВыберите действие:\n1. Посмотреть оценки \n2. Посмотреть ДЗ \n3. Найти книги")
     try:
         choice1 = int(input("Ваш ответ: "))
     except ValueError:
@@ -89,13 +104,16 @@ def student_menu(name):
         student = Student(name)
         sub = input("Введите предмет: ")
         student.view_HW(sub)
+    elif choice1 == 3:
+        subject = input("Введите предмет для поиска книг: ")
+        student_find_books(subject)
+
     else:
         print("Неправильный выбор!")
   
 
 
     
-
 
 
 

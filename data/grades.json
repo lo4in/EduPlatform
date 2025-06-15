@@ -28,5 +28,11 @@
         "student": "Kolya",
         "grade": "3",
         "teacher": "Nastya"
+    },
+    {
+        "subject": "Phythics",
+        "student": "John",
+        "grade": "5",
+        "teacher": "Nastya"
     }
 ]
